@@ -1,0 +1,54 @@
+/*@import "bourbon/bourbon/_bourbon.scss"; */
+
+* {
+    box-sizing:border-box;
+}
+.main {
+    width:100%;
+    height:auto;
+    border:1px solid red;
+}
+
+
+.wrapper {
+    border:1px solid blue;
+    margin:auto;
+    max-width:56.25rem;
+    width:100%;
+    height:56.25rem;
+    display: grid;
+    grid-template-columns: 90px 10px 1fr 10px 300px;
+    grid-template-rows: 90px 250px auto 50px;
+}
+.header {
+    border:3px solid blue;
+    grid-column: 1 / 6; 
+    grid-row: 1 / 2; 
+}
+.rail {
+    border:3px solid red;
+    grid-column: 1 / 2; 
+    grid-row: 2 / 4; 
+
+}
+.content {
+    border:3px solid green;
+    grid-column: 3 / 4; 
+    grid-row: 2 / 4; 
+}
+.advertisement {
+    background-color:papayawhip;
+    grid-column: 5 / 6; 
+    grid-row: 2 / 3; 
+}
+.stuff {
+    border:3px solid orange;
+    grid-column: 5 / 5;
+    grid-row: 3 / 4; 
+
+}
+.footer {
+    border:1px solid  black;
+    grid-column: 1 / 6; 
+    grid-row: 4 / 5; 
+}
