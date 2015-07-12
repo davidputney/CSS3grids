@@ -30,32 +30,35 @@ var paths = {
 	};
 
 
+
 gulp.task('css', function () {
 
-    var processors = [
-        importer(),
-        variables(),
-        mixins(),
-        pxtorem(),
-        vars(),
-        cssnext(),
-        pxtorem({
-						root_value: 16,
-						unit_precision: 5,
-						prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'max-width', 'width', 'height', 'grid-template-columns', 'grid-template-rows' ],
-						selector_black_list: [],
-						replace: true,
-						media_query: true
-        }),
-        autoprefixer({
-        		browsers: ['last 2 version']
-        }),
-        nested()
-    ];
-
+	var importPartials = [
+      importer()
+  ];
+  var processors = [
+      mixins(),
+      pxtorem(),
+      vars(),
+      cssnext(),
+      pxtorem({
+					root_value: 16,
+					unit_precision: 5,
+					prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'max-width', 'width', 'height', 'grid-template-columns', 'grid-template-rows' ],
+					selector_black_list: [],
+					replace: true,
+					media_query: true
+      }),
+      autoprefixer({
+      		browsers: ['last 2 version']
+      }),
+			variables(),
+      nested()
+  ];
    return gulp.src(paths.css.input)
-        .pipe(postcss(processors))
-         .pipe(rename("styles.css"))
+	      .pipe(postcss(importPartials))
+  //      .pipe(postcss(processors))
+        .pipe(rename("styles.css"))
         .pipe( gulp.dest(paths.css.output) );
 });
 

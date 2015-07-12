@@ -1,0 +1,12 @@
+*$foo: 'Montserrat', sans-serif;
+
+h1 {
+  font-family: $foo;
+  font-weight:700;
+  font-size:24px;
+}
+h2 {
+  font-family: $foo;
+  font-size:18px;
+  font-weight:700;
+}
