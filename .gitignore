@@ -2,3 +2,4 @@
 /bourbon
 config.codekit
 /.sass-cache
+/css/styles.css
