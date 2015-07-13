@@ -12,11 +12,12 @@
     "gulp-postcss": "^5.1.9",
     "gulp-rename": "^1.2.2",
     "gulp-watch": "^4.2.4",
-    "postcss-css-variables": "^0.3.8",
+    "postcss-css-variables": "^0.4.0",
     "postcss-import": "^6.0.0",
     "postcss-mixins": "^0.3.0",
     "postcss-nested": "^0.3.2",
     "postcss-pxtorem": "^2.3.0",
+    "postcss-simple-extend": "^0.3.2",
     "postcss-simple-vars": "^0.3.0",
     "postcss-style-guide": "^0.4.1"
   },
