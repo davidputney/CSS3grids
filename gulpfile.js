@@ -53,11 +53,12 @@ gulp.task('css', function () {
       		browsers: ['last 2 version']
       }),
 			variables(),
+			extend(),
       nested()
-  ];
+  ]; 
    return gulp.src(paths.css.input)
 	      .pipe(postcss(importPartials))
-  //      .pipe(postcss(processors))
+        .pipe(postcss(processors))
         .pipe(rename("styles.css"))
         .pipe( gulp.dest(paths.css.output) );
 });
