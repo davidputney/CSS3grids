@@ -1,12 +1,18 @@
-*$foo: 'Montserrat', sans-serif;
+$foo: 'Montserrat', sans-serif;
+
+@define-placeholder header {
+  font-family: $foo;
+  font-weight:700;
+  text-align:center;
+}
 
 h1 {
-  font-family: $foo;
-  font-weight:700;
-  font-size:24px;
+	@extend header;
+  font-size:24px; 
 }
 h2 {
-  font-family: $foo;
+	@extend header;
   font-size:18px;
-  font-weight:700;
 }
+
+
