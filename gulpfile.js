@@ -73,19 +73,6 @@ gulp.task('css', function () {
 });
 
 
-gulp.task('styleguide', function () {
-    var postcss = require('gulp-postcss');
-    var processedCSS = fs.readFileSync('css/styles.css', 'utf-8');
-    return gulp.src('css/styles.css')
-        .pipe(postcss([
-             require('postcss-style-guide')(processedCSS, {
-                 name: "Project name"
-             })
-         ]))
-        .pipe(gulp.dest('build/'));
-});
-
-
 gulp.task('fileinclude', function() {
   gulp.src(paths.html.input)
     .pipe(fileinclude(/*{
