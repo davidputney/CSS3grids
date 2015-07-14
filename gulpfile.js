@@ -36,7 +36,6 @@ var paths = {
 	};
 
 
-
 gulp.task('css', function () {
 
 	var importPartials = [
@@ -61,7 +60,7 @@ gulp.task('css', function () {
 			variables(),
 			extend(),
       nested()
-  ]; 
+  ];
    return gulp.src(paths.css.input)
 	      .pipe(postcss(importPartials))
         .pipe(postcss(processors))
