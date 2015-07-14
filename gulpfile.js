@@ -32,6 +32,10 @@ var paths = {
 	markdown: {
 		input: 'src/markdown/*.md',
 		output: 'dist/markdown/'
+		},
+		scripts: {
+		input: 'src/js/*.js',
+		output: 'dist/js/'
 		}
 	};
 
@@ -96,6 +100,11 @@ gulp.task('markdown', function () {
     return gulp.src(paths.markdown.input)
         .pipe(markdown())
         .pipe(gulp.dest(paths.markdown.output));
+});
+
+gulp.task('js', function () {
+    return gulp.src(paths.scripts.input)
+        .pipe(gulp.dest(paths.scripts.output));
 });
 
 gulp.task('listen', function () {
