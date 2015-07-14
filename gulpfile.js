@@ -105,3 +105,15 @@ gulp.task('listen', function () {
         gulp.start('fileinclude');
     });
 });
+
+gulp.task('build', function () {
+  		gulp.start('css')
+  		gulp.start('fileinclude')
+  		gulp.start('markdown')
+  		gulp.start('js');
+});
+
+
+gulp.task('default', function () {
+  gulp.start('build');
+});
