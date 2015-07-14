@@ -16,9 +16,9 @@ $second-break:550px;
 		"rail . content . advertisment"
 		"rail . content . stuff"
 		"footer footer footer footer footer";
-
   padding:5px 5px 10px;
-  	@media screen and (max-width: $first-break) {
+
+  @media screen and (max-width: $first-break) {
   	  grid-template-columns: 1fr 10px 300px;
   		grid-template-rows: 90px 250px auto auto 50px;
   		grid-template-areas:
@@ -38,8 +38,7 @@ $second-break:550px;
 				"rail"
 				"stuff"
 				"footer";
-  	} 
-  
+  	}
 }
 .header-r {
 	border:2px solid blue;
@@ -60,15 +59,15 @@ $second-break:550px;
 	background-color:papayawhip;
 	grid-area: advertisment;
 	margin:5px;
-	max-width:300px;  
+	max-width:300px;
 	  	@media screen and (max-width: $second-break) {
 	  		margin:5px auto;
-	  	}	
+	  	}
 }
 .stuff-r {
 	border:2px solid orange;
 	grid-area: stuff;
-	margin:5px; 	
+	margin:5px;
 }
 .footer-r {
 	border:2px solid  black;
