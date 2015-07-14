@@ -22,13 +22,13 @@ var gulp = require('gulp'),
 
 var paths = {
 	css: {
-		input: 'src/*.css',
-		output: 'css/',
+		input: 'src/css/*.css',
+		output: 'dist/css/',
 	},
-		guide: {
-		input: 'css/',
-		output: 'style_guide/',
-	}
+	html: {
+		input: 'src/html/*.html ',
+		output: 'dist/html/'
+	},
 	markdown: {
 		input: 'src/markdown/*.md',
 		output: 'dist/markdown/'
