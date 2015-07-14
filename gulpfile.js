@@ -16,7 +16,9 @@ var gulp = require('gulp'),
 		autoprefixer = require('autoprefixer'),
 		importer = require('postcss-import'),
 		styleGuide = require('postcss-style-guide'),
-		fs = require('fs');
+		fs = require('fs'),
+		fileinclude = require('gulp-file-include'),
+		markdown = require('gulp-markdown');
 
 var paths = {
 	css: {
@@ -27,6 +29,10 @@ var paths = {
 		input: 'css/',
 		output: 'style_guide/',
 	}
+	markdown: {
+		input: 'src/markdown/*.md',
+		output: 'dist/markdown/'
+		}
 	};
 
 
@@ -74,6 +80,23 @@ gulp.task('styleguide', function () {
              })
          ]))
         .pipe(gulp.dest('build/'));
+});
+
+
+gulp.task('fileinclude', function() {
+  gulp.src(paths.html.input)
+    .pipe(fileinclude(/*{
+      prefix: '@@',
+      basepath: '@file'
+    }*/))
+    .pipe(gulp.dest(paths.html.output));
+});
+
+
+gulp.task('markdown', function () {
+    return gulp.src(paths.markdown.input)
+        .pipe(markdown())
+        .pipe(gulp.dest(paths.markdown.output));
 });
 
 gulp.task('listen', function () {
