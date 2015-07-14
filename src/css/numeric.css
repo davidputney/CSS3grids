@@ -1,0 +1,109 @@
+$first-break:750px;
+$second-break:550px;
+
+
+.wrapper {
+  border:1px solid gray;
+  margin:auto;
+  max-width:900px;
+  width:100%;
+  height:auto;
+  display: grid;
+  grid-template-columns: 120px 10px 1fr 10px 300px;
+  grid-template-rows: 150px 250px auto 90px;
+  padding:5px 5px 10px;
+  	@media screen and (max-width: $first-break) {
+  	  grid-template-columns: 1fr 10px 300px;
+  		grid-template-rows: 90px 250px auto auto 50px;
+  		border:3px solid red;
+  	}
+  	@media screen and (max-width: $second-break) {
+  	  grid-template-columns: 1fr;
+  		grid-template-rows: 60px auto 250px auto auto 50px;
+  		border:3px solid green;
+  	} 
+  
+}
+.header {
+	border:2px solid blue;
+	grid-column: 1 / 6;
+	grid-row: 1 / 2;
+	margin:5px;
+		@media screen and (max-width: $first-break) {
+			grid-column: 1 / 6;
+			grid-row: 1 / 2;
+		}	
+		@media screen and (max-width: $second-break) {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}	
+}
+.rail {
+	border:2px solid red;
+	grid-column: 1 / 2;
+	grid-row: 2 / 4;
+	margin:5px;
+	  	@media screen and (max-width: $first-break) {
+	  		grid-column: 1 / 2;
+	  		grid-row: 4 / 5;
+	  	}
+	  	@media screen and (max-width: $second-break) {
+				grid-column: 1 / 2;
+				grid-row:  4 / 5;
+				}	
+}
+.content {
+	border:2px solid green;
+	grid-column: 3 / 4;
+	grid-row: 2 / 4;
+	margin:5px;
+			@media screen and (max-width: $first-break) {
+	  		grid-column: 1 / 2;
+	  	}
+	  	@media screen and (max-width: $second-break) {
+				grid-column: 1 / 2;
+				grid-row: 2 / 3;
+}
+}
+.advertisement {
+	background-color:papayawhip;
+	grid-column: 5 / 6;
+	grid-row: 2 / 3;
+	margin:5px;
+	max-width:300px;
+		@media screen and (max-width: $first-break) {
+	  		grid-column: 3 / 4;
+	  	}
+	  	@media screen and (max-width: $second-break) {
+				grid-column: 1 / 2;
+				grid-row: 3 / 4;
+				margin:5px auto;
+}	  	
+}
+.stuff {
+	border:2px solid orange;
+	grid-column: 5 / 6;
+	grid-row: 3 / 4;
+	margin:5px;
+				@media screen and (max-width: $first-break) {
+	  			grid-column: 3 / 4;
+	  	}
+	  	@media screen and (max-width: $second-break) {
+				grid-column: 1 / 2;
+				grid-row: 5 / 6;
+}	  	
+}
+.footer {
+	border:2px solid  black;
+	grid-column: 1 / 6;
+	grid-row: 4 / 5;
+	margin:5px;
+		  @media screen and (max-width: $first-break) {
+	  			grid-column: 1 / 5;
+	  			grid-row: 5 / 6;
+	  	}
+	  	@media screen and (max-width: $second-break) {
+				grid-column: 1 / 2;
+				grid-row: 6 / 7;
+}	
+}

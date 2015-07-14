@@ -1,0 +1,16 @@
+
+* {
+  box-sizing:border-box;
+}
+
+.main {
+  width:100%;
+  height:auto;
+}
+
+
+@import 'headers.css';
+@import 'lists.css';
+@import 'numeric.css';
+@import 'regions.css';
+
