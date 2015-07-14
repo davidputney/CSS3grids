@@ -47,13 +47,13 @@ gulp.task('css', function () {
   ];
   var processors = [
       mixins(),
-      pxtorem(),
       vars(),
       cssnext(),
+      extend(),
       pxtorem({
 					root_value: 16,
 					unit_precision: 5,
-					prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'max-width', 'width', 'height', 'grid-template-columns', 'grid-template-rows' ],
+					prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'max-width', 'width', 'height', 'grid-template-columns', 'grid-template-rows', 'max-width', 'min-width', 'margin'],
 					selector_black_list: [],
 					replace: true,
 					media_query: true
@@ -62,7 +62,6 @@ gulp.task('css', function () {
       		browsers: ['last 2 version']
       }),
 			variables(),
-			extend(),
       nested()
   ];
    return gulp.src(paths.css.input)
