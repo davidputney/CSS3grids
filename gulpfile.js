@@ -103,4 +103,10 @@ gulp.task('listen', function () {
     gulp.watch(paths.css.input).on('change', function(file) {
         gulp.start('css');
     });
+     gulp.watch(paths.markdown.input).on('change', function(file) {
+        gulp.start('markdown');
+    });
+     gulp.watch(paths.html.input).on('change', function(file) {
+        gulp.start('fileinclude');
+    });
 });
