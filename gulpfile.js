@@ -53,7 +53,7 @@ gulp.task('css', function () {
       pxtorem({
 					root_value: 16,
 					unit_precision: 5,
-					prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'max-width', 'width', 'height', 'grid-template-columns', 'grid-template-rows', 'max-width', 'min-width', 'margin'],
+					prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'max-width', 'width', 'height', 'grid-template-columns', 'grid-template-rows', 'max-width', 'min-width', 'margin', 'padding-left'],
 					selector_black_list: [],
 					replace: true,
 					media_query: true
@@ -61,7 +61,6 @@ gulp.task('css', function () {
       autoprefixer({
       		browsers: ['last 2 version']
       }),
-			variables(),
       nested(),
       spiffing(),
       colorRebeccapurple()
