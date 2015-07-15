@@ -11,27 +11,27 @@ $second-break:550px;
   display: grid;
   grid-template-columns: 120px 10px 1fr 10px 300px;
   grid-template-rows: 150px 250px auto 90px;
-	grid-template-areas:
+  padding:5px 5px 10px;
+  grid-template-areas:
 		"header header header header header"
 		"rail . content . advertisment"
 		"rail . content . stuff"
 		"footer footer footer footer footer";
-  padding:5px 5px 10px;
 
-  @media screen and (max-width: $first-break) {
-  	  grid-template-columns: 1fr 10px 300px;
-  		grid-template-rows: 90px 250px auto auto 50px;
-  		grid-template-areas:
-				"header header header"
-				"content . advertisment"
-				"content . stuff"
-				"rail . ."
-				"footer footer footer";
+   @media screen and (max-width: $first-break) {
+		grid-template-columns: 1fr 10px 300px;
+		grid-template-rows: 90px 250px auto auto 50px;
+		grid-template-areas:
+			"header header header"
+			"content . advertisment"
+			"content . stuff"
+			"rail . ."
+			"footer footer footer";
   	}
-  	@media screen and (max-width: $second-break) {
-  	  grid-template-columns: 1fr;
-  		grid-template-rows: 60px auto 250px auto auto 50px;
-  		grid-template-areas:
+	@media screen and (max-width: $second-break) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 60px auto 250px auto auto 50px;
+		grid-template-areas:
 				"header"
 				"content"
 				"advertisment"
