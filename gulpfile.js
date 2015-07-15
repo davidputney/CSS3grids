@@ -64,7 +64,8 @@ gulp.task('css', function () {
       		browsers: ['last 2 version']
       }),
 			variables(),
-      nested()
+      nested(),
+      spiffing(),
       colorRebeccapurple()
   ];
    return gulp.src(paths.css.input)
