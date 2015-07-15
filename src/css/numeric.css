@@ -3,7 +3,7 @@ $second-break:550px;
 
 
 .wrapper {
-  border:1px solid gray;
+  border:1px solid grey !please;
   margin:auto;
   max-width:900px;
   width:100%;
@@ -24,7 +24,7 @@ $second-break:550px;
   	}   
 }
 .header {
-	border:2px solid blue;
+	border:2px solid rebeccapurple;
 	grid-column: 1 / 6;
 	grid-row: 1 / 2;
 	margin:5px;
@@ -47,22 +47,22 @@ $second-break:550px;
 	  		grid-row: 4 / 5;
 	  	}
 	  	@media screen and (max-width: $second-break) {
-				grid-column: 1 / 2;
-				grid-row:  4 / 5;
-				}
+			grid-column: 1 / 2;
+			grid-row:  4 / 5;
+		}
 }
 .content {
 	border:2px solid green;
 	grid-column: 3 / 4;
 	grid-row: 2 / 4;
 	margin:5px;
-			@media screen and (max-width: $first-break) {
+		@media screen and (max-width: $first-break) {
 	  		grid-column: 1 / 2;
 	  	}
 	  	@media screen and (max-width: $second-break) {
-				grid-column: 1 / 2;
-				grid-row: 2 / 3;
-}
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
 }
 .advertisement {
 	background-color:papayawhip;
@@ -74,23 +74,23 @@ $second-break:550px;
 	  		grid-column: 3 / 4;
 	  	}
 	  	@media screen and (max-width: $second-break) {
-				grid-column: 1 / 2;
-				grid-row: 3 / 4;
-				margin:5px auto;
-}
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+			margin:5px auto;
+		}
 }
 .stuff {
 	border:2px solid orange;
 	grid-column: 5 / 6;
 	grid-row: 3 / 4;
 	margin:5px;
-				@media screen and (max-width: $first-break) {
-	  			grid-column: 3 / 4;
+		@media screen and (max-width: $first-break) {
+	  		grid-column: 3 / 4;
 	  	}
 	  	@media screen and (max-width: $second-break) {
-				grid-column: 1 / 2;
-				grid-row: 5 / 6;
-}
+			grid-column: 1 / 2;
+			grid-row: 5 / 6;
+		}
 }
 .footer {
 	border:2px solid  black;
@@ -98,11 +98,11 @@ $second-break:550px;
 	grid-row: 4 / 5;
 	margin:5px;
 		  @media screen and (max-width: $first-break) {
-	  			grid-column: 1 / 5;
-	  			grid-row: 5 / 6;
+			grid-column: 1 / 5;
+			grid-row: 5 / 6;
 	  	}
 	  	@media screen and (max-width: $second-break) {
-				grid-column: 1 / 2;
-				grid-row: 6 / 7;
-}
+			grid-column: 1 / 2;
+			grid-row: 6 / 7;
+		}
 }
