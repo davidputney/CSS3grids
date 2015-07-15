@@ -11,7 +11,7 @@ A repository of files implementing experimental CSS3 grids that uses PostCSS to 
 * Clone the repository
 * At the repo root level, run npm install to install the dependencies. 
 * At the repo root level run "gulp" or "gulp build" to compile the dist files.
-* "gulp listen" 
+* "gulp listen" will watch/recompile the files. 
 
 ##Etc.
 * Markdown files save in src/markdown will automatically compile and be moved to the dist/markdown folder
