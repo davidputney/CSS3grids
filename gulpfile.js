@@ -19,6 +19,7 @@ var gulp = require('gulp'),
 		styleGuide = require('postcss-style-guide'),
 		fs = require('fs'),
 		fileinclude = require('gulp-file-include'),
+		colorRebeccapurple = require("postcss-color-rebeccapurple"),
 		markdown = require('gulp-markdown');
 
 var paths = {
@@ -64,6 +65,7 @@ gulp.task('css', function () {
       }),
 			variables(),
       nested()
+      colorRebeccapurple()
   ];
    return gulp.src(paths.css.input)
 	      .pipe(postcss(importPartials))
